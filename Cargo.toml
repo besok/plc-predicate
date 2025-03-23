@@ -1,0 +1,41 @@
+[package]
+name = "plc-predicate"
+version = "0.1.0"
+edition = "2021"
+authors = ["Boris Zhguchev <zhguchev@gmail.com>"]
+description = "A framework for building PLC programms"
+repository = "https://github.com/besok/plc-predicate"
+license = "Apache-2.0"
+keywords = ["plc", "predicate", "automation"]
+categories = ["embedded"]
+readme = "README.md"
+
+[dependencies]
+# Add dependencies as needed
+# For example:
+# serde = { version = "1.0", features = ["derive"], optional = true }
+
+[dev-dependencies]
+# Testing dependencies
+# For example:
+# criterion = "0.5"
+
+[features]
+# Optional features
+# default = ["std"]
+# std = []
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
