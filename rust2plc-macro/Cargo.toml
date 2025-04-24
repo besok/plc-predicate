@@ -1,0 +1,18 @@
+[package]
+name = "rust2plc-macro"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.84.0"
+
+[lib]
+proc-macro = true
+
+
+
+[dependencies]
+rust2plc = { path = "../rust2plc" }
+
+syn = { version = "2.0.99", features = ["full", "extra-traits"] }
+quote = "1.0"
+proc-macro2 = "1.0"
+chrono = "0.4.40"

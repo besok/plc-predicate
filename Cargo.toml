@@ -9,11 +9,11 @@ license = "Apache-2.0"
 keywords = ["plc", "predicate", "automation"]
 categories = ["embedded"]
 readme = "README.md"
+rust-version = "1.84.0"
 
 [dependencies]
-# Add dependencies as needed
-# For example:
-# serde = { version = "1.0", features = ["derive"], optional = true }
+rust2plc = { path = "rust2plc" }
+rust2plc-macro= { path = "rust2plc-macro" }
 
 [dev-dependencies]
 # Testing dependencies
@@ -39,3 +39,6 @@ debug = true
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
+
+[workspace]
+members = ["rust2plc-macro", "."]
