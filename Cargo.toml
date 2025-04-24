@@ -2,14 +2,14 @@
 name = "plc-predicate"
 version = "0.1.0"
 edition = "2021"
+rust-version = "1.86.0"
 authors = ["Boris Zhguchev <zhguchev@gmail.com>"]
 description = "A framework for building PLC programms"
 repository = "https://github.com/besok/plc-predicate"
 license = "Apache-2.0"
 keywords = ["plc", "predicate", "automation"]
 categories = ["embedded"]
-readme = "README.md"
-rust-version = "1.84.0"
+readme = "README.md" 
 
 [dependencies]
 rust2plc = { path = "rust2plc" }
@@ -41,4 +41,4 @@ all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
 [workspace]
-members = ["rust2plc-macro", "."]
+members = ["rust2plc-macro","rust2plc", "."]
