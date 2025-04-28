@@ -1,7 +1,6 @@
-mod st;
-mod registry;
-mod types;
-pub mod langs;
 pub mod error;
-mod var; 
- 
+pub mod langs;
+pub mod registry;
+pub mod st;
+pub mod types;
+pub mod var;

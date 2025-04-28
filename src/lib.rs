@@ -10,6 +10,11 @@ pub fn add(left: u64, right: u64) -> u64 {
     left + right
 }
 
+#[plc_fn(st, namespace = "Math", version = "1.0")]
+pub fn sub(left: u64, right: u64) -> u64 {
+    left - right
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
